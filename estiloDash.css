@@ -1,0 +1,111 @@
+/* Começo globais */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    background-color:  whitesmoke;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    
+}
+
+.grafico1 {
+    width: 400px;
+    height: 400px;
+}
+
+.grafico2 {
+    width: 400px;
+    height: 400px;
+}
+
+
+
+/* Fim globais */
+
+/* Começo header/navbar */
+
+.header {
+    display: flex;
+    justify-content: center;
+    border-bottom: #D7263D solid 2px;
+    border-bottom-left-radius: 300px;
+    background-color: #010e1a;
+}
+
+.header img {
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.header .container {
+    align-items: center;
+    justify-content: space-between;
+    width: 90vw;
+    
+}
+
+.header .titulo {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+.header .titulo h1 {
+    margin: 0;
+    color: #D7263D;
+}
+
+.header .urls {
+    width: 270px;
+}
+
+.header .urls ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    font-size: 17px;
+}
+
+.header .urls a {
+    color: white;
+    text-decoration: none;
+}
+
+.header .urls #aqui {
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+/* Fim header */
+
+/* Começo home */
+
+.bg_header{
+    background-color: #010e1a;
+}
+
+.home {
+    height: calc(100vh - 72px);
+    width: 100%;
+    
+    background-image: url(imagens/shopping_bg.jpg);
+  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home .container {
+    justify-content: center;
+    align-items: center;
+    
+}
+
+

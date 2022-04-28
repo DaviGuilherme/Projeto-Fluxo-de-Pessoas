@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estiloDash copy.css">
+    <link rel="shortcut icon" href="imagens/Logo_Temporaria.png" />
+    <title>DashBoard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+    <div class="bg_header">
+        <div class="header">
+            <div class="container">
+
+                <div class="titulo">
+                    <h1>Sentinel Track</h1>
+                </div>
+
+                <div class="urls">
+                    <ul>
+                        <li>
+                            <a href="Index.html" id="aqui"> Voltar para home </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="background"></div>
+
+    
+
+    <div class="home">
+        <div class="container">
+
+            <div style="width: 1000px;">
+                <canvas id="myChart" class="grafico1"></canvas>
+            </div> 
+            
+            <div style="width: 1000px;">
+                <canvas id="myChart2" class="grafico2"></canvas>
+            </div> 
+
+        </div>
+    </div>
+    <br> 
+    <br>
+
+
+    
+
+    
+
+
+</body>
+
+</html>
+<script>
+
+    // TÍTULOS DOS GRAFICOS ////////////////////////////////////////////////////////////////////////////////////////////
+    const labels = [
+        'Segunda',
+        'Terça',
+        'Quarta',
+        'Quinta',
+        'Sexta',
+        'Sábado',
+        'Domingo',
+    ];
+
+    const labels2 = [
+        'Semana 1',
+        'Semana 2',
+        'Semana 3',
+        'Semana 4',
+
+    ];
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    // GRAFICO 1  DE COLUNAS ///////////////////////////////////////////////////////////////////////////////////////////
+
+    const data = {
+        labels: labels,
+        datasets: [{
+            label: 'Dias da semana',
+            backgroundColor: [
+                'rgb(255,	0,	0)',
+                'rgb(255,	100, 0)',
+                'rgb(255,	255,	0)',
+                'rgb(0, 255, 0)',
+                'rgb(0, 0, 255)',
+                'rgb(75, 0, 130)',
+                'rgb(143, 0, 255)',
+            ],
+
+
+            data: [10000000, 9000758, 8234635, 10658258, 13789777, 12458159, 14000000],
+        }
+        ]
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////
+
+    };
+    // GRAFICO 2 DE LINHA ///////////////////////////////////////////////////////////////////////////////////////////
+
+    const data2 = {
+        labels: labels2,
+        datasets: [{
+            label: 'Semana',
+            backgroundColor: [
+                'rgb(255,	0,	0)',
+            ],
+            borderColor: [
+                'rgb(255,	0,	0)',
+            ],
+
+            data: [13788025, 20412988, 9267582, 10503750],
+        }
+        ]
+
+
+
+    };
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    // GRAFICO 3 DE Doughnut
+
+
+    // CONFIGURAÇÕES DOS GRAFICOS ///////////////////////////////////////////////////////////////////////////////////////////
+
+
+    const config = {
+        type: 'bar',
+        data: data,
+        options: {}
+
+    };
+
+    const config2 = {
+        type: 'line',
+        data: data2,
+        options: {}
+
+    };
+
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    // INSERIR GRAFICOS ////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    const myChart = new Chart(
+        document.getElementById('myChart'),
+        config,
+    );
+
+    const myChart2 = new Chart(
+        document.getElementById('myChart2'),
+        config2,
+    );
+
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+</script>
